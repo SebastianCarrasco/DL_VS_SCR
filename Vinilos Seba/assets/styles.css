@@ -1,0 +1,234 @@
+body {
+    margin: 0;  /* Elimina los márgenes predeterminados del cuerpo del documento */
+    font-family: Arial, sans-serif;  /* Establece la fuente predeterminada para todo el contenido del cuerpo */
+}
+
+header {
+    padding: 10px 20px;  /* Añade espacio alrededor del contenido dentro del encabezado */
+    display: flex;  /* Utiliza Flexbox para el diseño del encabezado */
+    justify-content: space-between;  /* Distribuye el espacio entre los elementos de forma que se alineen en los extremos */
+    align-items: center;  /* Alinea los elementos verticalmente en el centro */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);  /* Añade una sombra suave debajo del encabezado */
+    background-image: url('../imagenes/imagen_portada.jpg');  /* Establece una imagen de fondo para el encabezado */
+    background-size: cover;  /* Asegura que la imagen de fondo cubra todo el espacio disponible */
+    background-position: center;  /* Centra la imagen de fondo dentro del encabezado */
+}
+
+.header-content {
+    width: 100%;  /* Asegura que el contenedor interno ocupe todo el ancho del encabezado */
+    display: flex;  /* Usa Flexbox para la disposición de los elementos internos */
+    justify-content: space-between;  /* Alinea un elemento al inicio y otro al final del contenedor */
+    align-items: center;  /* Alinea los elementos verticalmente en el centro */
+}
+
+.header-content h1 {
+    margin: 0;  /* Elimina el margen predeterminado del título */
+    font-size: 24px;  /* Establece el tamaño del título del encabezado */
+    color: #333;  /* Establece el color del texto del título */
+}
+
+.header-logo {
+    width: 50px;  /* Define el ancho de la imagen del logo */
+    height: 50px;  /* Define la altura de la imagen del logo */
+    border-radius: 50%;  /* Redondea la imagen para hacerla circular */
+    object-fit: cover;  /* Asegura que la imagen cubra completamente el área sin deformarse */
+}
+
+footer {
+    background-color: #f8f8f8;  /* Establece el color de fondo del pie de página */
+    padding: 10px 20px;  /* Añade espacio alrededor del contenido dentro del pie de página */
+    display: flex;  /* Usa Flexbox para la disposición de los elementos dentro del pie de página */
+    justify-content: center;  /* Centra el contenido horizontalmente */
+    align-items: center;  /* Centra los elementos verticalmente */
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);  /* Añade una sombra en la parte superior del pie de página */
+}
+
+.footer-content p {
+    margin: 0;  /* Elimina el margen predeterminado del párrafo */
+    font-size: 16px;  /* Define el tamaño del texto del párrafo */
+    color: #333;  /* Establece el color del texto */
+}
+
+.carousel-container {
+    display: flex;  /* Usa Flexbox para alinear el carrusel */
+    justify-content: center;  /* Centra el carrusel horizontalmente */
+    align-items: center;  /* Opcional, para centrar el carrusel verticalmente si es necesario */
+    width: 100%;  /* Asegura que el contenedor del carrusel ocupe el ancho completo de su contenedor padre */
+}
+
+.carousel {
+    max-width: 500px;  /* Define el ancho máximo del carrusel */
+    max-height: 450px;  /* Define la altura máxima del carrusel */
+    overflow: hidden;  /* Oculta cualquier parte de las imágenes que exceda el tamaño del carrusel */
+    position: relative;  /* Usa una posición relativa para el posicionamiento de los elementos internos */
+    background-size: cover;  /* Asegura que la imagen de fondo cubra todo el espacio disponible */
+    background-position: center;  /* Centra la imagen de fondo dentro del carrusel */
+}
+
+.carousel-images {
+    display: flex;  /* Usa Flexbox para la disposición de las imágenes dentro del carrusel */
+    transition: transform 2s ease;  /* Suaviza la transición de las imágenes al desplazarse */
+}
+
+.carousel-images img {
+    width: 100%;  /* Asegura que cada imagen llene el carrusel */
+    height: auto;  /* Ajusta la altura de las imágenes automáticamente para mantener la proporción */
+    object-fit: cover;  /* Asegura que las imágenes cubran completamente el área sin deformarse */
+    display: none;  /* Oculta todas las imágenes inicialmente, excepto la que tenga la clase 'active' */
+}
+
+.carousel-images img.active {
+    display: block;  /* Muestra la imagen activa */
+}
+
+/* Estilo para el fondo oscurecido del modal */
+.modal {
+    display: none; /* Mantiene el modal oculto hasta que se active */
+    position: fixed; /* Se mantiene en la misma posición de pantalla al desplazar */
+    z-index: 1; /* Asegura que el modal esté por encima de otros contenidos */
+    left: 0; /* Alinea el modal a la izquierda de la pantalla */
+    top: 0; /* Alinea el modal a la parte superior de la pantalla */
+    width: 100%; /* Establece el ancho del modal al 100% del ancho de la ventana */
+    height: 100%; /* Establece la altura del modal al 100% del alto de la ventana */
+    overflow: auto; /* Permite desplazar dentro del modal si el contenido excede el tamaño de la pantalla */
+    background-color: rgba(0,0,0,0.4); /* Color de fondo oscuro con opacidad para el efecto de oscurecimiento */
+}
+
+/* Estilos para el contenido dentro del modal */
+.modal-content {
+    background-color: #fefefe; /* Fondo blanco para el contenido del modal */
+    margin: 15% auto; /* Centra el contenido del modal vertical y horizontalmente */
+    padding: 20px; /* Añade espacio alrededor del contenido dentro del modal */
+    border: 1px solid #888; /* Borde gris para el contenido del modal */
+    width: 80%; /* Ancho del contenido del modal respecto al ancho del modal */
+}
+
+/* Estilos para el botón de cerrar */
+.close {
+    color: #aaa; /* Color gris para el botón de cerrar */
+    float: right; /* Posiciona el botón a la derecha del contenido del modal */
+    font-size: 28px; /* Tamaño de fuente grande para el botón */
+    font-weight: bold; /* Fuente en negrita para el botón */
+}
+
+/* Estilos para el estado hover y focus del botón de cerrar */
+.close:hover,
+.close:focus {
+    color: black; /* Cambia el color a negro al pasar el mouse o enfocar */
+    text-decoration: none; /* Elimina la decoración de texto */
+    cursor: pointer; /* Cambia el cursor a puntero para indicar que es clickeable */
+}
+
+#modalImage {
+    max-width: 50%; /* Ajusta el ancho máximo al 90% del ancho del modal */
+    max-height: 50vh; /* Ajusta la altura máxima al 80% de la altura de la ventana */
+    display: block; /* Esto asegura que la imagen se muestre correctamente */
+    margin: 0 auto; /* Centra la imagen horizontalmente en el modal */
+}
+
+/* Estilos para el botón dentro del modal */
+button {
+    background-color: #4CAF50; /* Color de fondo verde para el botón */
+    color: white; /* Texto blanco para alta visibilidad */
+    padding: 10px 20px; /* Padding generoso para hacer el botón más grande y fácil de clickear */
+    border: none; /* Sin bordes para un look más limpio */
+    border-radius: 5px; /* Bordes redondeados para un estilo más suave */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que es un botón clickeable */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo cuando se interactúa con el botón */
+    margin-top: 20px; /* Margen superior para separar del contenido de imagen */
+}
+
+/* Estilos para el botón cuando se pasa el mouse sobre él */
+button:hover {
+    background-color: #45a049; /* Oscurece el color del botón para indicar que es interactuable */
+}
+
+/* Estilos adicionales para el botón cuando está enfocado o activo, por accesibilidad */
+button:focus,
+button:active {
+    outline: none; /* Elimina el contorno que los navegadores añaden cuando el botón está enfocado */
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #4CAF50; /* Añade un sombreado para mejorar la visibilidad cuando está activo */
+}
+
+/* Estilos para el contenedor de tarjetas */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Centra las tarjetas si no llenan toda la línea */
+    gap: 20px; /* Espacio entre tarjetas */
+}
+
+/* Estilos para cada tarjeta */
+.card {
+    width: calc(20% - 20px); /* Calcula el ancho para 5 tarjetas por fila, restando el espacio del gap */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Oculta cualquier contenido que se desborde */
+    margin-bottom: 20px; /* Espacio debajo de cada tarjeta para cuando se envuelven */
+}
+/* Estilos para la imagen de la tarjeta */
+.card img {
+    width: 100%; /* Asegura que la imagen cubra todo el ancho de la tarjeta */
+    height: 200px; /* Altura fija para las imágenes */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
+    cursor: pointer; /* Indica que la imagen es interactiva */
+}
+
+/* Estilos para el cuerpo de la tarjeta */
+.card-body {
+    padding: 10px; /* Espacio interno */
+}
+
+/* Estilos para el título del vinilo dentro de la tarjeta */
+.card-body h3 {
+    margin: 10px 0; /* Espacio arriba y abajo del título */
+    font-size: 16px; /* Tamaño del texto */
+    color: #333; /* Color del texto */
+}
+
+/* Estilos para el precio */
+.card-body .price {
+    font-size: 18px; /* Tamaño del texto del precio */
+    color: green; /* Color verde para resaltar el precio */
+    font-weight: bold; /* Negrita para destacar */
+}
+
+/* Estilos para el botón de comprar */
+.card-body button {
+    background-color: #4CAF50; /* Establece un color de fondo verde para el botón, haciéndolo más visible y atractivo */
+    color: white; /* Color de texto blanco para alta legibilidad contra el fondo verde */
+    border: none; /* Elimina el borde predeterminado para un diseño más limpio y moderno */
+    padding: 8px 16px; /* Añade relleno alrededor del texto para mejorar la ergonomía y facilidad de clic */
+    border-radius: 5px; /* Redondea las esquinas del botón para un estilo suave y moderno */
+    cursor: pointer; /* Cambia el cursor a una mano cuando se pasa sobre el botón, indicando que es clickeable */
+}
+
+
+.card-body button:hover {
+    background-color: #45a049; /* Oscurece el botón al pasar el mouse */
+}
+
+/* Ajustes adicionales para asegurar la responsividad */
+@media (max-width: 1200px) { /* Ajusta este breakpoint según tus necesidades */
+    .card {
+        width: calc(25% - 20px); /* 4 tarjetas por fila en pantallas un poco más pequeñas */
+    }
+}
+
+@media (max-width: 992px) {
+    .card {
+        width: calc(33.3333% - 20px); /* 3 tarjetas por fila en pantallas aún más pequeñas */
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px); /* 2 tarjetas por fila en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        width: 100%; /* 1 tarjeta por fila en pantallas muy pequeñas */
+    }
+}

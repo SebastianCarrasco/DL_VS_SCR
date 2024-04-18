@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!-- Esta declaración define que este documento es un documento HTML5. -->
+<html lang="es">
+<!-- El elemento <html> es la raíz del documento HTML, con un atributo lang que especifica el idioma del contenido del documento. -->
+
+<head>
+    <!-- El elemento <head> contiene metadatos/información para el documento. -->
+    <meta charset="UTF-8">
+    <!-- <meta charset="UTF-8"> especifica la codificación de caracteres para el documento HTML. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- La vista de la ventana gráfica es ajustada para dispositivos con diferentes anchos de pantalla. -->
+    <title>ViniloSeba - Tu página de música</title>
+    <!-- El título de la página que aparece en la pestaña del navegador. -->
+    <link rel="stylesheet" href="./assets/styles.css">
+    <!-- Enlace a la hoja de estilos CSS externa, que define cómo se muestran los elementos HTML. -->
+</head>
+
+
+<body>
+    <!-- El cuerpo del documento, donde coloco todo el contenido visible en la página web. -->
+    <header>
+        <!-- El elemento <header> representa un contenedor de contenido introductorio o de navegación. -->
+        <div class="header-content">
+            <!-- Contenedor para el contenido del encabezado. -->
+            <h1>ViniloSeba</h1>
+            <!-- <h1> representa el título más importante, aquí es el nombre de la página. -->
+            <img src="imagenes/logo_principal.png" alt="Logo ViniloSeba" class="header-logo">
+            <!-- Imagen del logo de la página, con una clase para aplicar estilos específicos. -->
+        </div>
+    </header>
+    <!-- Aquí Agrego mi sección de Carrusel con ofertas de vinilos -->
+    <section>
+        <!-- Sección genérica utilizada para agrupar contenido temático, en este caso, el carrusel de ofertas. -->
+        <h2 style="text-align: center;">Próximamente</h2>
+        <!-- Título de la sección, centrado directamente en el HTML. -->
+        <div class="carousel-container">
+            <!-- Contenedor para el carrusel de imágenes. -->
+            <div class="carousel">
+                <!-- Contenedor que actúa como el carrusel visual. -->
+                <div class="carousel-images">
+                    <!-- Contiene las imágenes del carrusel. -->
+                    <img src="imagenes/oferta_vinilo_1.jpg" alt="Oferta Vinilo 1" class="active">
+                    <!-- Imagen activa en el carrusel. -->
+                    <img src="imagenes/oferta_vinilo_2.jpg" alt="Oferta Vinilo 2">
+                    <!-- Segunda imagen en el carrusel. -->
+                    <img src="imagenes/oferta_vinilo_3.jpg" alt="Oferta Vinilo 3">
+                    <!-- Tercera imagen en el carrusel. -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- fin de sección Carrusel con ofertas de vinilos -->
+    <!-- Sección de tarjetas para mostrar los vinilos -->
+    <section class="vinilos-cards">
+        <h2 style="text-align: center;">Vinilos Disponibles</h2>
+        <div class="card-container">
+            <!-- Tarjeta individual para un vinilo -->
+            <div class="card">
+                <img src="imagenes/vinilo_1.jpg" alt="Vinilo 1" onclick="abrirModal(this.src)">
+                <div class="card-body">
+                    <h3>MARK FARNER – ROCK N ROLL SOUL: LIVE, AUGUST 20, 1989 VINILO</h3>
+                    <p class="price">$33.900</p>
+                    <button onclick="comprarVinilo()">Comprar Vinilo</button>
+                </div>
+            </div>
+            <!-- Tarjeta individual para el segundo vinilo -->
+            <div class="card">
+                <img src="imagenes/vinilo_2.jpg" alt="Vinilo 1" onclick="abrirModal(this.src)">
+                <div class="card-body">
+                    <h3>MONO – UNDER THE PIPAL TREE VINILO 2LP</h3>
+                    <p class="price">$41.900</p>
+                    <button onclick="comprarVinilo()">Comprar Vinilo</button>
+                </div>
+            </div>
+            <!-- Tarjeta individual para el tercer vinilo -->
+            <div class="card">
+                <img src="imagenes/vinilo_3.jpg" alt="Vinilo 1" onclick="abrirModal(this.src)">
+                <div class="card-body">
+                    <h3>MONO – UNDER THE PIPAL TREE VINILO 2LP</h3>
+                    <p class="price">$41.900</p>
+                    <button onclick="comprarVinilo()">Comprar Vinilo</button>
+                </div>
+            </div>
+            <!-- Tarjeta individual para el cuarto vinilo -->
+            <div class="card">
+                <img src="imagenes/vinilo_4.jpg" alt="Vinilo 1" onclick="abrirModal(this.src)">
+                <div class="card-body">
+                    <h3>DONALD FAGEN – THE NIGHTFLY VINILO 180G</h3>
+                    <p class="price">$37.900</p>
+                    <button onclick="comprarVinilo()">Comprar Vinilo</button>
+                </div>
+            </div>
+            <!-- Tarjeta individual para el quinto vinilo -->
+            <div class="card">
+                <img src="imagenes/vinilo_5.jpg" alt="Vinilo 1" onclick="abrirModal(this.src)">
+                <div class="card-body">
+                    <h3>GRAND FUNK RAILROAD – LIVE ALBUM VINILO 2LP 180G RED AUDIOPHILE </h3>
+                    <p class="price">$95.900</p>
+                    <button onclick="comprarVinilo()">Comprar Vinilo</button>
+                </div>
+            </div>
+            <!-- Tarjeta individual para el sexto vinilo -->
+            <div class="card">
+                <img src="imagenes/vinilo_6.jpg" alt="Vinilo 1" onclick="abrirModal(this.src)">
+                <div class="card-body">
+                    <h3>Emperor Tomato Ketchup (Expanded Edition, 3LP) </h3>
+                    <p class="price">$44.900</p>
+                    <button onclick="comprarVinilo()">Comprar Vinilo</button>
+                </div>
+            </div>
+            <!-- Tarjeta individual para el septimo vinilo -->
+            <div class="card">
+                <img src="imagenes/vinilo_7.jpg" alt="Vinilo 1" onclick="abrirModal(this.src)">
+                <div class="card-body">
+                    <h3>Rage Against The Machine - Rage Against The Machine </h3>
+                    <p class="price">$37.900</p>
+                    <button onclick="comprarVinilo()">Comprar Vinilo</button>
+                </div>
+            </div>
+            <!-- Tarjeta individual para el octavo vinilo -->
+            <div class="card">
+                <img src="imagenes/vinilo_8.jpg" alt="Vinilo 1" onclick="abrirModal(this.src)">
+                <div class="card-body">
+                    <h3>Love Goes - Sam Smith</h3>
+                    <p class="price">$71.900</p>
+                    <button onclick="comprarVinilo()">Comprar Vinilo</button>
+                </div>
+            </div>
+            <!-- Tarjeta individual para el noveno vinilo -->
+            <div class="card">
+                <img src="imagenes/vinilo_9.jpg" alt="Vinilo 1" onclick="abrirModal(this.src)">
+                <div class="card-body">
+                    <h3>Back in Black - AC/DC</h3>
+                    <p class="price">$33.900</p>
+                    <button onclick="comprarVinilo()">Comprar Vinilo</button>
+                </div>
+            </div>
+            <!-- Tarjeta individual para el decimo vinilo -->
+            <div class="card">
+                <img src="imagenes/vinilo_10.jpg" alt="Vinilo 1" onclick="abrirModal(this.src)">
+                <div class="card-body">
+                    <h3>Red (Taylor's Version) - Taylor Swift</h3>
+                    <p class="price">$72.900</p>
+                    <button onclick="comprarVinilo()">Comprar Vinilo</button>
+                </div>
+            </div>
+            <!-- Tarjeta individual para el undecimo vinilo -->
+            <div class="card">
+                <img src="imagenes/vinilo_11.jpg" alt="Vinilo 1" onclick="abrirModal(this.src)">
+                <div class="card-body">
+                    <h3>Never Mind The Bollocks - Sex Pistols</h3>
+                    <p class="price">$26.900</p>
+                    <button onclick="comprarVinilo()">Comprar Vinilo</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <!-- El elemento <footer> representa un pie de página para el contenido más cercano o para todo el documento. -->
+        <div class="footer-content">
+            <!-- Contenedor para el contenido del pie de página. -->
+            <p>&copy; 2024 ViniloSeba - Todos los derechos reservados.</p>
+            <!-- Párrafo con texto de derechos de autor, incluye el símbolo de copyright. -->
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <!-- Enlace al archivo JavaScript externo que controla la funcionalidad interactiva. -->
+
+    <!-- Modal para ver detalles del vinilo -->
+    <div id="viniloModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modalImage" src="" alt="Vinilo Imagen" style="width:100%">
+            <button onclick="comprarVinilo()">Comprar Vinilo</button>
+        </div>
+    </div>
+</body>
+
+</html>
